@@ -122,8 +122,8 @@ intakeElevUpButton.whileHeld(new Cmd_IntakeElevUP( m_sub_IntakeElev ) ,true);
     SmartDashboard.putData("IntakeElevUpButton",new Cmd_IntakeElevUP( m_sub_IntakeElev ) );
 
 final JoystickButton intakeElevDownButton = new JoystickButton(controller, XboxController.Button.kA.value);        
-intakeElevDownButton.whileHeld(new Cmd_IntakeElevDown( m_sub_IntakeElev ) ,true);
-    SmartDashboard.putData("IntakeElevDownButton",new Cmd_IntakeElevDown( m_sub_IntakeElev ) );
+intakeElevDownButton.whileHeld(new Cmd_IntakeElevOut( m_sub_IntakeElev ) ,true);
+    SmartDashboard.putData("IntakeElevDownButton",new Cmd_IntakeElevOut( m_sub_IntakeElev ) );
 
 final JoystickButton shooting1Button = new JoystickButton(controller, XboxController.Button.kA.value);        
 shooting1Button.whileHeld(new Cmd_Shooting1( m_sub_Shooter1 ) ,true);
