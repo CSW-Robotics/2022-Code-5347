@@ -40,6 +40,8 @@ public class Constants {
     public static int drivetrainRearRightTalonPort = 0;
     public static int climbingTalonPort = 0;
     public static int beltsTalonPort = 0;
+    public static int joystickPort = 0;
+    public static int controllerPort = 0;
 
    /**
     * public static final class DriveConstants {
