@@ -47,7 +47,7 @@ shootingTalon2 = new TalonSRX(Constants.shooterTalon2Port);
     }
 
     public void spinup(){
-        shootingTalon2.set(ControlMode.PercentOutput, 1);
+        shootingTalon2.set(ControlMode.PercentOutput, 0.1);
 
         }
 

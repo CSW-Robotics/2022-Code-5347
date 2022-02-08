@@ -31,7 +31,7 @@ package frc.robot;
 public class Constants {
 
     public static int shooterTalon1Port = 0;
-    public static int shooterTalon2Port = 0;
+    public static int shooterTalon2Port = 6;
     public static int intakeSpinTalon = 0;
     public static int intakeElevTalon = 0;
     public static int drivetrainFrontLeftTalonPort = 0;
