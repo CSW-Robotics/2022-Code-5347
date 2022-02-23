@@ -146,9 +146,9 @@ shooting2Button.whileHeld(new Cmd_Shooting2( m_sub_Shooter2 ) ,true);
     new JoystickButton(controller, 1).whenHeld(new Cmd_ClimbingUp(m_sub_Climbing));
     new JoystickButton(controller, 1).whenHeld(new Cmd_IntakeElevOut(m_sub_IntakeElev));
     new JoystickButton(controller, 1).whenHeld(new Cmd_IntakeElevUP(m_sub_IntakeElev));
-    new JoystickButton(controller, 1).whenHeld(new Cmd_IntakeSpin(m_sub_IntakeSpin));
-    new JoystickButton(controller, 1).whenHeld(new Cmd_Shooting1(m_sub_Shooter1));
-    new JoystickButton(controller, 2).whenHeld(new Cmd_Shooting2(m_sub_Shooter2));
+    new JoystickButton(controller, 2).whenHeld(new Cmd_IntakeSpin(m_sub_IntakeSpin));
+    new JoystickButton(controller, 3).whenHeld(new Cmd_Shooting1(m_sub_Shooter1));
+    new JoystickButton(controller, 6).whenHeld(new Cmd_Shooting2(m_sub_Shooter2));
 
 
 
