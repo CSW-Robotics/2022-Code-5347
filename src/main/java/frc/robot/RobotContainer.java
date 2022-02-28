@@ -141,7 +141,7 @@ shooting2Button.whileHeld(new Cmd_Shooting2( m_sub_Shooter2 ) ,true);
 
 
     
-    new JoystickButton(controller, 1).whenHeld(new Cmd_Belts(m_sub_Belts));
+    new JoystickButton(controller, 7).whenHeld(new Cmd_Belts(m_sub_Belts));
     new JoystickButton(controller, 1).whenHeld(new Cmd_ClimbingDown(m_sub_Climbing));
     new JoystickButton(controller, 1).whenHeld(new Cmd_ClimbingUp(m_sub_Climbing));
     new JoystickButton(controller, 9).whenHeld(new Cmd_IntakeElevOut(m_sub_IntakeElev));
