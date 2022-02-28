@@ -51,7 +51,7 @@ shootingTalon1 = new TalonFX(Constants.shooterTalon1Port);
 
     public void shoot(){
         // Sets shootingTalon1 to 100% speed
-        shootingTalon1.set(ControlMode.PercentOutput, 0.65);
+        shootingTalon1.set(ControlMode.PercentOutput, .75);
     }
 
     public void stop(){
