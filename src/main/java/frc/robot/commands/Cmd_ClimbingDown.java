@@ -55,12 +55,13 @@ public class Cmd_ClimbingDown extends CommandBase {
     // Called every time the scheduler runs while the command is scheduled.
     @Override
     public void execute() {
-        m_sub_Climbing.climbstop();
+       
     }
 
     // Called once the command ends or is interrupted.
     @Override
     public void end(boolean interrupted) {
+        m_sub_Climbing.climbstop();
     }
 
     // Returns true when the command should end.
