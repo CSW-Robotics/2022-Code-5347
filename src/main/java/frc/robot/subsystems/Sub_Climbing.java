@@ -49,11 +49,11 @@ climbingTalon = new TalonFX(Constants.climbingTalonPort);
 //sets speed to 100%
     }
     public void climbup(){
-        climbingTalon.set(ControlMode.PercentOutput, .2);
+        climbingTalon.set(ControlMode.PercentOutput, .4);
     }
 //set speed to go backward
     public void climbdown(){
-        climbingTalon.set(ControlMode.PercentOutput, -.2);
+        climbingTalon.set(ControlMode.PercentOutput, -.4);
     }
 //sets speed to 0%
     public void climbstop(){
