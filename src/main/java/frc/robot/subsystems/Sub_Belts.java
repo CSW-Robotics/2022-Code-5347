@@ -57,6 +57,10 @@ beltsTalon = new TalonSRX(Constants.beltsTalonPort);
         beltsTalon.set(ControlMode.PercentOutput, 0);
     }
 
+    public void Reverse(){
+        beltsTalon.set(ControlMode.PercentOutput, -0.3);
+    }
+
     @Override
     public void periodic() {
         // This method will be called once per scheduler run

@@ -135,7 +135,7 @@ shooting1Button.whileHeld(new Cmd_Shooting1( m_sub_Shooter1 ) ,true);
     SmartDashboard.putData("Shooting1Button",new Cmd_Shooting1( m_sub_Shooter1 ) );
 
 final JoystickButton shooting2Button = new JoystickButton(controller, XboxController.Button.kA.value);        
-shooting2Button.whileHeld(new Cmd_Shooting2( m_sub_Shooter2 ) ,true);
+shooting2Button.whBileHeld(new Cmd_Shooting2( m_sub_Shooter2 ) ,true);
     SmartDashboard.putData("Shooting2Button",new Cmd_Shooting2( m_sub_Shooter2 ) );
 */
 
@@ -149,6 +149,7 @@ shooting2Button.whileHeld(new Cmd_Shooting2( m_sub_Shooter2 ) ,true);
     new JoystickButton(controller, 8).whenHeld(new Cmd_IntakeSpin(m_sub_IntakeSpin));
     new JoystickButton(controller, 6).whenHeld(new Cmd_Shooting1(m_sub_Shooter1));
     new JoystickButton(controller, 15).whenHeld(new Cmd_Shooting2(m_sub_Shooter2));
+    new JoystickButton(controller, 2).whenHeld(new Cmd_BeltsReverse(m_sub_Belts));
 
 
 
