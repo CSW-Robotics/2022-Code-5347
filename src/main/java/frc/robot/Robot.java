@@ -14,10 +14,20 @@ package frc.robot;
 
 import edu.wpi.first.hal.FRCNetComm.tInstances;
 import edu.wpi.first.hal.FRCNetComm.tResourceType;
+import edu.wpi.first.networktables.NetworkTableEntry;
+import edu.wpi.first.util.sendable.Sendable;
+
+import java.sql.Time;
+
 import edu.wpi.first.hal.HAL;
 import edu.wpi.first.wpilibj.TimedRobot;
 import edu.wpi.first.wpilibj2.command.Command;
 import edu.wpi.first.wpilibj2.command.CommandScheduler;
+import edu.wpi.first.wpilibj.Timer;
+import edu.wpi.first.wpilibj.smartdashboard.SmartDashboard;
+import edu.wpi.first.networktables.NetworkTable;
+import edu.wpi.first.networktables.NetworkTableEntry;
+import edu.wpi.first.networktables.NetworkTableInstance;
 
 /**
  * The VM is configured to automatically run this class, and to call the
@@ -32,6 +42,13 @@ public class Robot extends TimedRobot {
 
     private RobotContainer m_robotContainer;
 
+    private double StartTime;
+
+    private double time;
+
+    public NetworkTableInstance Timertable;
+
+    private int FiveValue;
     /**
      * This function is run when the robot is first started up and should be
      * used for any initialization code.
@@ -94,6 +111,8 @@ public class Robot extends TimedRobot {
 
     @Override
     public void teleopInit() {
+        StartTime = Timer.getFPGATimestamp();
+        FiveValue = 5;
         // This makes sure that the autonomous stops running when
         // teleop starts running. If you want the autonomous to
         // continue until interrupted by another command, remove
@@ -108,6 +127,17 @@ public class Robot extends TimedRobot {
      */
     @Override
     public void teleopPeriodic() {
+        //NetworkTableInstance Timertable = NetworkTableInstance.getDefault();
+        double time = Timer.getFPGATimestamp();
+        SmartDashboard.putNumber("Timer", time);
+
+        if (time - StartTime < 500){
+            SmartDashboard.putNumber("Fivevalue", FiveValue);
+        }
+        else {
+            SmartDashboard.putNumber("Fivevalue + 1", FiveValue + 1);
+        }
+
     }
 
     @Override
