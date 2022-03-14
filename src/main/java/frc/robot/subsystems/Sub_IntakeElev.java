@@ -47,12 +47,12 @@ intakeUpDownTalon = new TalonSRX(Constants.intakeElevTalon);
 
     public void IntakeElevOut (){
         //Brings Intake Out
-        intakeUpDownTalon.set(ControlMode.PercentOutput, 1);
+        intakeUpDownTalon.set(ControlMode.PercentOutput, -0.2);
     }
     
     public void IntakeElevIn (){
         //Brings Intake In
-        intakeUpDownTalon.set(ControlMode.PercentOutput, -1);
+        intakeUpDownTalon.set(ControlMode.PercentOutput, 0.7);
     }
 
     public void IntakeElevStop (){

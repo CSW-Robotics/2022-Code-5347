@@ -31,14 +31,14 @@ package frc.robot;
 public class Constants {
 
     public static int shooterTalon1Port = 11;
-    public static int shooterTalon2Port = 2;
+    public static int shooterTalon2Port = 1;
     public static int intakeSpinTalon = 9;
     public static int intakeElevTalon = 8;
     public static int drivetrainFrontLeftTalonPort = 6;
     public static int drivetrainRearLeftTalonPort = 5;
     public static int drivetrainFrontRightTalonPort = 10;
     public static int drivetrainRearRightTalonPort = 7;
-    public static int climbingTalonPort = 2;
+    public static int climbingTalonPort = 12;
     public static int beltsTalonPort = 4;
     public static int joystickPort = 0;
     public static int controllerPort = 0;
