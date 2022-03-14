@@ -79,6 +79,10 @@ drive = new DifferentialDrive(drivetrainGroupLeft, drivetrainGroupRight);
         drive.arcadeDrive(ForewardSpeed, - RotationSpeed);
     }
 
+    public void AutoDrive(double ForewardSpeed, double RotationSpeed){
+        drive.arcadeDrive(ForewardSpeed, RotationSpeed);
+    }
+
     @Override
     public void periodic() {
         // This method will be called once per scheduler run

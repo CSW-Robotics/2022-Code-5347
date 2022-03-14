@@ -100,6 +100,9 @@ public class Robot extends TimedRobot {
         if (m_autonomousCommand != null) {
             m_autonomousCommand.schedule();
         }
+
+        StartTime = Timer.getMatchTime();
+        
     }
 
     /**
@@ -107,12 +110,20 @@ public class Robot extends TimedRobot {
     */
     @Override
     public void autonomousPeriodic() {
+        double time = Timer.getFPGATimestamp();
+        SmartDashboard.putNumber("Timer", time);
+
+        if (time - StartTime < 500){
+            SmartDashboard.putNumber("Fivevalue", FiveValue);
+        }
+        else {
+            SmartDashboard.putNumber("Fivevalue + 1", FiveValue + 1);
+        }
     }
 
     @Override
     public void teleopInit() {
-        StartTime = Timer.getFPGATimestamp();
-        FiveValue = 5;
+       
         // This makes sure that the autonomous stops running when
         // teleop starts running. If you want the autonomous to
         // continue until interrupted by another command, remove
@@ -128,17 +139,10 @@ public class Robot extends TimedRobot {
     @Override
     public void teleopPeriodic() {
         //NetworkTableInstance Timertable = NetworkTableInstance.getDefault();
-        double time = Timer.getFPGATimestamp();
-        SmartDashboard.putNumber("Timer", time);
-
-        if (time - StartTime < 500){
-            SmartDashboard.putNumber("Fivevalue", FiveValue);
-        }
-        else {
-            SmartDashboard.putNumber("Fivevalue + 1", FiveValue + 1);
+      
         }
 
-    }
+    
 
     @Override
     public void testInit() {
