@@ -19,18 +19,27 @@ public class CmdGroup_Autonomouse extends SequentialCommandGroup {
       new CmdGroup_DriveUntilTimeout(.35,-0.8),
       //wait
       new Cmd_WaitCommand(1.5),
-      //move toward Hub
-      new CmdGroup_DriveUntilTimeout(0.6, 0.75),
+      //move away from Hub
+        //new CmdGroup_DriveUntilTimeout(0.6, 0.75),
       //wait again
-      new Cmd_WaitCommand(1.5),
+        //new Cmd_WaitCommand(0.5),
       //pull ball out of shooter
       new CmdGroup_BeltsSetup(0.5),
       //wait
       new Cmd_WaitCommand(0.25),
       //shoot, dang it
       new CmdGroup_AutoShoot(3.0),
+      //wait
+      new Cmd_WaitCommand(0.25),
+      //Turn 180 Degrees
+      new CmdGroup_TurnUntilTimeout(2.4, 0.5),
+      //wait
+      new Cmd_WaitCommand(0.25),
+      //Move forward and intake
+      new CmdGroup_AutoIntake(4)
+
       //get out of the paint
-      new CmdGroup_DriveUntilTimeout(3.0, 0.5)
+      //new CmdGroup_DriveUntilTimeout(3.0, 0.5)
     );
   }
 }
