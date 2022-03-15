@@ -4,22 +4,25 @@
 
 package frc.robot.commands;
 
-import java.util.function.DoubleSupplier;
-
 import edu.wpi.first.wpilibj2.command.InstantCommand;
 import edu.wpi.first.wpilibj2.command.ParallelDeadlineGroup;
-import frc.robot.subsystems.Sub_Drivetrain;
+import edu.wpi.first.wpilibj2.command.WaitCommand;
+import frc.robot.subsystems.Sub_Belts;
+import frc.robot.subsystems.Sub_Shooter1;
 
 // NOTE:  Consider using this command inline, rather than writing a subclass.  For more
 // information, see:
 // https://docs.wpilib.org/en/stable/docs/software/commandbased/convenience-features.html
-public class CmdGroup_DriveUntilTimeout extends ParallelDeadlineGroup {
-  /** Creates a new CmdGroup_DriveUntilTimeout. */
-  public CmdGroup_DriveUntilTimeout(double timeout, double velocity) {
+public class CmdGroup_BeltsSetup extends ParallelDeadlineGroup {
+  /** Creates a new CmdGroup_BeltsSetup. */
+  public CmdGroup_BeltsSetup(double timeout) {
     // Add the deadline command in the super() call. Add other commands using
     // addCommands().
-    super(new Cmd_WaitCommand(timeout));
-    addCommands(new Cmd_Drivetrain(new Sub_Drivetrain(), velocity, 0.0));
+    super(new WaitCommand(timeout));
+    addCommands(
+      new Cmd_ShootingReverse(new Sub_Shooter1()),
+      new Cmd_BeltsReverse(new Sub_Belts())
+    );
     // addCommands(new FooCommand(), new BarCommand());
   }
 }

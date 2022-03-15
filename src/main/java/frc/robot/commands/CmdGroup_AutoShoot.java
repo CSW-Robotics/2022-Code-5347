@@ -40,7 +40,7 @@ public class CmdGroup_AutoShoot extends ParallelDeadlineGroup {
       new ParallelCommandGroup(
         new Cmd_Shooting1(new Sub_Shooter1()),
         new SequentialCommandGroup(
-          new Cmd_WaitCommand(timeout - 2.0),
+          new Cmd_WaitCommand(timeout - 1.0),
           new Cmd_Belts(new Sub_Belts())
         )
       ) );

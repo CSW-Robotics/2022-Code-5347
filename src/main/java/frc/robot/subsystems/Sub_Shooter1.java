@@ -54,6 +54,11 @@ shootingTalon1 = new TalonFX(Constants.shooterTalon1Port);
         shootingTalon1.set(ControlMode.PercentOutput, .85);
     }
 
+    public void reverse_shooter (){
+        //sets shootingTalon1 to 15% backwards
+        shootingTalon1.set(ControlMode.PercentOutput, -.15);
+    }
+
     public void stop(){
         // Sets shootingTalon1 to 0% speed
         shootingTalon1.set(ControlMode.PercentOutput,0);

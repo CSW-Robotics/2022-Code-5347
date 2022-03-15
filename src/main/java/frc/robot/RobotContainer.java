@@ -153,11 +153,8 @@ shooting2Button.whBileHeld(new Cmd_Shooting2( m_sub_Shooter2 ) ,true);
     new JoystickButton(controller, 15).whenHeld(new Cmd_Shooting2(m_sub_Shooter2));
     new JoystickButton(controller, 2).whenHeld(new Cmd_BeltsReverse(m_sub_Belts));
 
-    //Drive forward for a few seconds
-    new JoystickButton(controller, 4).whenPressed(new CmdGroup_DriveUntilTimeout(0.25));
-
-    //Shoot for a few seconds and the stop
-    new JoystickButton(controller, 1).whenPressed(new CmdGroup_AutoShoot(4.0));
+    //run Autonomous(e)
+    new JoystickButton(controller, 1).whenPressed(new CmdGroup_Autonomouse());
 
 
 
