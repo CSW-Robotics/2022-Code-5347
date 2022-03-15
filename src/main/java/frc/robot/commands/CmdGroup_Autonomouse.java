@@ -17,6 +17,9 @@ public class CmdGroup_Autonomouse extends SequentialCommandGroup {
     addCommands(
       // shimmy to get intake down
       new CmdGroup_DriveUntilTimeout(.35,-0.8),
+      //jerk back for maximum shake effects
+      //WOBBLE WOBBLE WOB- *smack*
+      new CmdGroup_DriveUntilTimeout(.1, 1),
       //wait
       new Cmd_WaitCommand(1.5),
       //move away from Hub
@@ -24,7 +27,7 @@ public class CmdGroup_Autonomouse extends SequentialCommandGroup {
       //wait again
         //new Cmd_WaitCommand(0.5),
       //pull ball out of shooter
-      new CmdGroup_BeltsSetup(0.5),
+      new CmdGroup_BeltsSetup(0.25),
       //wait
       new Cmd_WaitCommand(0.25),
       //shoot, dang it
