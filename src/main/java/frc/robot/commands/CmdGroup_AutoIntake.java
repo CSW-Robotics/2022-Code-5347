@@ -20,7 +20,7 @@ public class CmdGroup_AutoIntake extends ParallelDeadlineGroup {
     super(new Cmd_WaitCommand(timeout));
     addCommands(
       new Cmd_IntakeSpin(new Sub_IntakeSpin()),
-      new CmdGroup_DriveUntilTimeout(timeout, -0.5)
+      new CmdGroup_DriveUntilTimeout(timeout, -0.6)
 
     );
     // addCommands(new FooCommand(), new BarCommand());
