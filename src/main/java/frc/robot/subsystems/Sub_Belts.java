@@ -48,7 +48,7 @@ beltsTalon = new TalonSRX(Constants.beltsTalonPort);
 
     public void Spinup(){
     //Sets beltsTalon to 100% speed
-        beltsTalon.set(ControlMode.PercentOutput, .75);
+        beltsTalon.set(ControlMode.PercentOutput, .65);
     
     }
 
