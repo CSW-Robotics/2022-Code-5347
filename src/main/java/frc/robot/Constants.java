@@ -25,7 +25,7 @@ package frc.robot;
  * constants.  This class should not be used for any other purpose.  All constants should be
  * declared globally (i.e. public static).  Do not put anything functional in this class.
  *
- * <p>It is advised to statically import this class (or one of its inner classes) wherever the
+ * <p>It is advised to statically import th8s class (or one of its inner classes) wherever the
  * constants are needed, to reduce verbosity.
  */
 public class Constants {
@@ -43,6 +43,10 @@ public class Constants {
     public static int joystickPort = 0;
     public static int controllerPort = 0;
 
+    //high port
+      //public static double shooterPower = 0.83;
+    //low port
+    public static double shooterPower = 0.75;
    /**
     * public static final class DriveConstants {
     *   public static final int kLeftMotor1Port = 0;

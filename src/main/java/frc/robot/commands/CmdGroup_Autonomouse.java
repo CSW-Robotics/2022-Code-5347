@@ -15,17 +15,18 @@ public class CmdGroup_Autonomouse extends SequentialCommandGroup {
     // Add your commands in the addCommands() call, e.g.
     // addCommands(new FooCommand(), new BarCommand());
     addCommands(
+      
       // shimmy to get intake down
-      new CmdGroup_DriveUntilTimeout(.35,-0.8),
+      new CmdGroup_DriveUntilTimeout(0.35,-0.8),
       //jerk back for maximum shake effects
       //WOBBLE WOBBLE WOB- *smack*
       new CmdGroup_DriveUntilTimeout(.1, 1),
       //wait
       new Cmd_WaitCommand(1.5),
       //move away from Hub
-        //new CmdGroup_DriveUntilTimeout(0.6, 0.75),
+      new CmdGroup_DriveUntilTimeout(0.4, 0.75),
       //wait again
-        //new Cmd_WaitCommand(0.5),
+      new Cmd_WaitCommand(0.5),
       //pull ball out of shooter
       new CmdGroup_BeltsSetup(0.25),
       //wait
@@ -35,14 +36,15 @@ public class CmdGroup_Autonomouse extends SequentialCommandGroup {
       //wait
       new Cmd_WaitCommand(0.25),
       //Turn 180 Degrees
-      new CmdGroup_TurnUntilTimeout(2.4, 0.5),
+      new CmdGroup_TurnUntilTimeout(1.26, 0.7),
       //wait
       new Cmd_WaitCommand(0.25),
       //Move forward and intake
-      new CmdGroup_AutoIntake(4)
+      new CmdGroup_AutoIntake(2.5)
 
       //get out of the paint
       //new CmdGroup_DriveUntilTimeout(3.0, 0.5)
+      
     );
   }
 }
